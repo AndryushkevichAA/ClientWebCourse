@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница 1</title>
+</head>
+<body>
+<form action="handler.php" method="post">
+    <div>
+        <label>
+            Имя:
+            <input type="text" name="firstName" placeholder="Введите имя">
+        </label>
+
+        <label>
+            Фамилия:
+            <input type="text" name="lastName" placeholder="Введите фамилию">
+        </label>
+    </div>
+    <div>
+        <label>
+            Страна проживания
+            <select name="country">
+                <option value="UK">Великобритания</option>
+                <option value="Germany">Германия</option>
+                <option value="Italy">Италия</option>
+                <option value="Canada">Канада</option>
+                <option value="China">Китай</option>
+                <option selected value="Russia">Россия</option>
+                <option value="USA">США</option>
+                <option value="France">Франция</option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <p>Ваш возраст:</p>
+        <label>
+            <input type="radio" value="under18" name="age">
+            Младше 18 лет
+        </label>
+        <label>
+            <input type="radio" value="18-60" name="age" checked>
+            Oт 18 до 60 лет
+        </label>
+        <label>
+            <input type="radio" value="over60" name="age">
+            Старше 60 лет
+        </label>
+    </div>
+    <div>
+        <p>Какими языками владеете?</p>
+        <label>
+            <input type="checkbox" value="russian" name="lang">
+            Русский
+        </label>
+        <label>
+            <input type="checkbox" value="english" name="lang">
+            Английский
+        </label>
+        <label>
+            <input type="checkbox" value="german" name="lang">
+            Немецкий
+        </label>
+        <label>
+            <input type="checkbox" value="french" name="lang">
+            Франзузский
+        </label>
+        <label>
+            <input type="checkbox" value="chinese" name="lang">
+            Китайский
+        </label>
+        <label>
+            <input type="checkbox" value="italian" name="lang">
+            Итальянский
+        </label>
+    </div>
+    <div>
+        <label>
+            Какие страны вы посещали в течение последних 5 лет?
+            <select multiple name="visitCountries">
+                <option value="UK">Великобритания</option>
+                <option value="Germany">Германия</option>
+                <option value="Italy">Италия</option>
+                <option value="Canada">Канада</option>
+                <option value="China">Китай</option>
+                <option value="Russia">Россия</option>
+                <option value="USA">США</option>
+                <option value="France">Франция</option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <label>
+            Введите сообщение:
+            <textarea name="massage">Текст сообщения</textarea>
+        </label>
+    </div>
+    <button type="submit">Отправить</button>
+</form>
+<a href="page2.html">Перейти на страницу 2</a>
+</body>
+</html>
