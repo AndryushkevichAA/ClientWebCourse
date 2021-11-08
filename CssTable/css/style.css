@@ -1,0 +1,50 @@
+.container {
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 859px;
+}
+
+.employee_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Calibri, sans-serif;
+}
+
+.employee_table thead {
+    background-color: #3498DB;
+}
+
+.employee_table th {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.employee_table th, .employee_table td {
+    border: #CFCFCF 1px solid;
+    padding-left: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.employee_table td {
+    color: #000000;
+    font-size: 23px;
+}
+
+.employee_table th:first-child, .employee_table td:first-child {
+    width: 20.5%;
+}
+
+.employee_table th:nth-child(2), .employee_table td:nth-child(2) {
+    width: 20.1%;
+}
+
+.employee_table th:nth-child(3), .employee_table td:nth-child(3) {
+    width: 36.2%;
+}
+
+.gray_row {
+    background-color: #EEEEEE;
+}
