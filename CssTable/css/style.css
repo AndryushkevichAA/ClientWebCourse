@@ -14,8 +14,24 @@
     background-color: #3498DB;
 }
 
+.first_name_column {
+    width: 20.5%;
+}
+
+.last_name_column {
+    width: 20.1%;
+}
+
+.job_title_column {
+    width: 36.2%;
+}
+
+.twitter_column {
+    width: 23.2%;
+}
+
 .employee_table th {
-    color: #FFFFFF;
+    color: #FFF;
     font-size: 24px;
     font-weight: normal;
     text-align: left;
@@ -23,28 +39,14 @@
 
 .employee_table th, .employee_table td {
     border: #CFCFCF 1px solid;
-    padding-left: 12px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px;
 }
 
 .employee_table td {
-    color: #000000;
+    color: #000;
     font-size: 23px;
 }
 
-.employee_table th:first-child, .employee_table td:first-child {
-    width: 20.5%;
-}
-
-.employee_table th:nth-child(2), .employee_table td:nth-child(2) {
-    width: 20.1%;
-}
-
-.employee_table th:nth-child(3), .employee_table td:nth-child(3) {
-    width: 36.2%;
-}
-
-.gray_row {
-    background-color: #EEEEEE;
+.employee_table tbody tr:nth-child(odd) {
+    background-color: #EEE;
 }
