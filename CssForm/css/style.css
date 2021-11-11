@@ -9,7 +9,8 @@
 .container h1 {
     font-size: 33px;
     font-weight: normal;
-    margin-block-end:0;
+    margin-block-end: 0;
+    padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 5px;
 }
@@ -36,29 +37,35 @@
     width: 100%;
     margin-top: 10px;
     border: none;
-    padding-top: 9px;
-    padding-left: 13px;
+    padding: 9px 13px;
 }
 
-.entry_field input{
-    padding-bottom: 9px;
+.entry_field input:focus-visible, .entry_field textarea:focus-visible {
+    outline: none;
 }
 
-.entry_field textarea{
-    padding-bottom: 85px;
+.entry_field textarea {
+    resize: none;
+    height: auto;
 }
 
 .application_form p {
     color: #737373;
+    margin-top: 20px;
 }
 
-.application_form button{
+.application_form button {
     display: inline-block;
     float: right;
     border: none;
-    background-color: #3498DB;
-    color: #FFFFFF;
+    background-color: #378DB2;
+    color: #FFF;
     font-weight: bold;
     font-size: 16px;
     padding: 10px 12px;
+}
+
+.application_form button:hover {
+    cursor: pointer;
+    background-color: #32728D;
 }
