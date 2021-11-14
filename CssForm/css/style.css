@@ -19,7 +19,7 @@
     background-color: #FEEED6;
     padding-right: 20px;
     padding-left: 20px;
-    padding-bottom: 54px;
+    padding-bottom: 15px;
 }
 
 .entry_field {
@@ -45,7 +45,7 @@
 }
 
 .entry_field textarea {
-    resize: none;
+    resize: vertical;
     height: auto;
 }
 
@@ -68,4 +68,10 @@
 .application_form button:hover {
     cursor: pointer;
     background-color: #32728D;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }
