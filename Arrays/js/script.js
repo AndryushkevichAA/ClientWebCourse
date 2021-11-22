@@ -37,10 +37,10 @@
     var oneHundredNumbersArray = getOneHundredNumbersArray();
     console.log("Массив из чисел от 1 до 100: " + oneHundredNumbersArray);
 
-    var evensSquaresArray = oneHundredNumbersArray.filter(function (number) {
+    var evenNumbersSquaresArray = oneHundredNumbersArray.filter(function (number) {
         return number % 2 === 0;
     }).map(function (number) {
         return Math.pow(number, 2);
     });
-    console.log("Список квадратов четных чисел: " + evensSquaresArray);
+    console.log("Список квадратов четных чисел: " + evenNumbersSquaresArray);
 })();
