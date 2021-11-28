@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature conversion</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Temperature conversion</h1>
+    <form class="temperature-conversion-form">
+        <label for="celsius-degree">Enter Celsius degree:</label>
+        <input id="celsius-degree" type="text">
+        <span>&deg;C</span>
+        <button id="convert-button" type="button">Convert</button>
+        <div class="error-message"></div>
+    </form>
+
+    <div class="temperature-conversion-result">
+        <div id="fahrenheit-degree"></div>
+        <span>&deg;F</span>
+    </div>
+    <div class="temperature-conversion-result">
+        <div id="kelvin"></div>
+        <span> K</span>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

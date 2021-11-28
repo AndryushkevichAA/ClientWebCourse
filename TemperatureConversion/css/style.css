@@ -1,0 +1,88 @@
+.container {
+    max-width: 560px;
+    background-color: #FEEED6;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 40px 50px;
+    font-family: Lato, sans-serif;
+}
+
+.container h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.temperature-conversion-form {
+    margin-top: 35px;
+}
+
+.temperature-conversion-form > * {
+    display: inline-block;
+}
+
+.temperature-conversion-form label {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 18px;
+    color: #071872;
+    font-weight: bold;
+}
+
+#celsius-degree {
+    padding: 6px;
+    width: 60%;
+}
+
+.temperature-conversion-form span, .temperature-conversion-result span {
+    font-weight: bold;
+    margin-left: 7px;
+    color: #071872;
+}
+
+.error-message {
+    color: #f00;
+    display: none;
+    margin-top: 7px;
+}
+
+.invalid {
+    border: #f00 1px solid;
+}
+
+.invalid ~ .error-message {
+    display: block;
+}
+
+#convert-button {
+    border: none;
+    background-color: #32728D;
+    font-size: 16px;
+    padding: 6px 10px;
+    font-weight: bold;
+    float: right;
+    color: #EAF1F8;
+    cursor: pointer;
+}
+
+#convert-button:focus {
+    background-color: #1C61A6;
+}
+
+.temperature-conversion-result {
+    margin-top: 25px;
+    line-height: 40px;
+}
+
+#fahrenheit-degree, #kelvin {
+    box-sizing: border-box;
+    border: #32728D 2px solid;
+    padding: 0 6px;
+    width: 64%;
+    height: 40px;
+
+}
+
+.temperature-conversion-result > * {
+    display: inline-block;
+    vertical-align: top;
+}
