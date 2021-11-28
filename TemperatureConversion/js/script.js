@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var convertButton = document.getElementById("convert-button");
     var fahrenheitDegree = document.getElementById("fahrenheit-degree");
     var kelvin = document.getElementById("kelvin");
-    var errorMessage = document.querySelector(".error-message")
+    var errorMessage = document.querySelector(".error-message");
 
     convertButton.addEventListener("click", function () {
         var degree = celsiusDegree.value.trim();
