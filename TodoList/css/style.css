@@ -46,7 +46,7 @@
     padding: 4px 7px;
 }
 
-.error-massage {
+.error-message {
     color: #f00;
     display: none;
     margin-top: 7px;
@@ -56,7 +56,7 @@
     border: #f00 1px solid;
 }
 
-.invalid ~ .error-massage {
+.invalid ~ .error-message {
     display: block;
 }
 
