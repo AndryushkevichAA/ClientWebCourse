@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var newTodoText = document.getElementById("new-todo-text");
     var newTodoButton = document.getElementById("new-todo-button");
 
+    newTodoText.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+        }
+    });
+
     newTodoButton.addEventListener("click", function () {
         var text = newTodoText.value.trim();
 
@@ -17,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function setEditMode() {
             todoItem.innerHTML = "<input class=\"edit-todo-text\">"
-                + "<button class=\"save-button\" type=\"button\">Save</button>"
-                + "<button class=\"cancel-button\" type=\"button\">Cancel</button>";
+                + "<button class=\"cancel-button\" type=\"button\">Cancel</button>"
+                + "<button class=\"save-button\" type=\"button\">Save</button>";
 
             todoItem.querySelector(".edit-todo-text").value = text;
 
-            todoItem.appendChild(document.querySelector(".error-massage").cloneNode(true));
+            todoItem.appendChild(document.querySelector(".error-message").cloneNode(true));
 
             todoItem.querySelector(".save-button").addEventListener("click", function () {
                 var newText = todoItem.querySelector(".edit-todo-text").value.trim();

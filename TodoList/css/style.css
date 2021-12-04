@@ -1,9 +1,11 @@
 .container {
-    max-width: 560px;
-    background-color: #FEEED6;
-    margin: 0 auto;
+    background-color: #EDEEF0;
+    max-width: 600px;
+    height: 100%;
+    margin: 50px auto;
     box-sizing: border-box;
-    padding: 15px 40px;
+    padding: 20px 40px;
+    border-radius: 5px;
     font-family: Lato, sans-serif;
 }
 
@@ -21,29 +23,11 @@
 
 .container input {
     padding: 3px;
+    border-radius: 5px;
 }
 
 .todo-text-entry-field > input {
     width: 100%;
-}
-
-.container button {
-    cursor: pointer;
-    font-weight: bold;
-}
-
-#new-todo-button {
-    float: right;
-}
-
-.edit-button {
-    margin-left: 20px;
-}
-
-#new-todo-button, .edit-button {
-    background-color: #2787F5;
-    font-size: 14px;
-    padding: 4px 7px;
 }
 
 .error-message {
@@ -65,25 +49,73 @@
     vertical-align: top;
 }
 
-#todo-list > li {
+.container ul {
+    padding-inline-start: 0;
+    width: 80%;
+    margin-top: 35px;
+}
+
+.container li {
     list-style: none;
-    margin-top: 10px;
-    margin-left: 0;
+    margin-top: 28px;
+}
+
+.edit-todo-text {
+    width: 60%;
+}
+
+.container button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.new-todo-form > button {
+    float: right;
+}
+
+.edit-button {
+    float: right;
+    margin-left: 20px;
+}
+
+.save-button {
+    float: right;
+    padding: 5px 10px;
+}
+
+.new-todo-form > button, .edit-button {
+    padding: 6px 15px;
+}
+
+.new-todo-form > button, .edit-button, .save-button {
+    font-size: 14px;
+    background-color: #3F94E9;
+}
+
+.new-todo-form > button:hover, .edit-button:hover, .save-button:hover {
+    background-color: #1D72C7;
 }
 
 .delete-button {
-    background-color: #E2000B;
     font-size: 11px;
     padding: 2px 4px;
     margin-right: 10px;
 }
 
-.save-button {
-    margin-left: 20px;
-    background-color: #01B956;
+.cancel-button {
+    font-size: 14px;
+    float: right;
+    padding: 5px 10px;
+    margin-left: 15px;
 }
 
-.cancel-button {
-    margin-left: 10px;
-    background-color: #E2000B;
+.delete-button, .cancel-button {
+    background-color: #E71313;
+}
+
+.delete-button:hover, .cancel-button:hover {
+    background-color: #D50000;
 }
