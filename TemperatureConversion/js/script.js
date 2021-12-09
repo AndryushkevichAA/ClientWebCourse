@@ -30,15 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        function convertToFahrenheitDegree() {
-            return Math.round((degree * (9 / 5) + 32) * 100) / 100;
+        function convertToFahrenheitDegree(degree) {
+            return (degree * (9 / 5) + 32).toFixed(2);
         }
 
-        function convertToKelvin() {
-            return Math.round((+degree + 273.15) * 100) / 100;
+        function convertToKelvin(degree) {
+            return (+degree + 273.15).toFixed(2);
         }
 
-        fahrenheitDegree.textContent = convertToFahrenheitDegree();
-        kelvin.textContent = convertToKelvin();
+        fahrenheitDegree.textContent = convertToFahrenheitDegree(degree);
+        kelvin.textContent = convertToKelvin(degree);
     });
 });
