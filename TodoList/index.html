@@ -10,12 +10,12 @@
 <body>
 <div class="container">
     <h1>Todo List</h1>
-    <form class="new-todo-form">
+    <form class="new-todo-form" onsubmit="return false;">
         <div class="todo-text-entry-field">
             <input id="new-todo-text" type="text">
             <div class="error-message">Text must be not empty</div>
         </div>
-        <button id="new-todo-button" type="button">Add</button>
+        <button id="new-todo-button" type="submit">Add</button>
     </form>
     <ul id="todo-list"></ul>
 </div>

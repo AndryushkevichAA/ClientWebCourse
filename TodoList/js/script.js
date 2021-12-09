@@ -3,12 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var newTodoText = document.getElementById("new-todo-text");
     var newTodoButton = document.getElementById("new-todo-button");
 
-    newTodoText.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-        }
-    });
-
     newTodoButton.addEventListener("click", function () {
         var text = newTodoText.value.trim();
 
