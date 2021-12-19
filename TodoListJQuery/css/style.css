@@ -1,0 +1,121 @@
+.container {
+    background-color: #EDEEF0;
+    max-width: 600px;
+    height: 100%;
+    margin: 50px auto;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-family: Lato, sans-serif;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.new-todo-form {
+    margin-top: 30px;
+}
+
+.todo-text-entry-field {
+    width: 80%;
+}
+
+.container input {
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.todo-text-entry-field > input {
+    width: 100%;
+}
+
+.error-message {
+    color: #f00;
+    display: none;
+    margin-top: 7px;
+}
+
+.invalid {
+    border: #f00 1px solid;
+}
+
+.invalid ~ .error-message {
+    display: block;
+}
+
+.new-todo-form > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.container ul {
+    padding-inline-start: 0;
+    width: 80%;
+    margin-top: 35px;
+}
+
+.container li {
+    list-style: none;
+    margin-top: 28px;
+}
+
+.edit-todo-text {
+    width: 60%;
+}
+
+.container button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.new-todo-form > button {
+    float: right;
+}
+
+.edit-button {
+    float: right;
+    margin-left: 20px;
+}
+
+.save-button {
+    float: right;
+    padding: 5px 10px;
+}
+
+.new-todo-form > button, .edit-button {
+    padding: 6px 15px;
+}
+
+.new-todo-form > button, .edit-button, .save-button {
+    font-size: 14px;
+    background-color: #3F94E9;
+}
+
+.new-todo-form > button:hover, .edit-button:hover, .save-button:hover {
+    background-color: #1D72C7;
+}
+
+.delete-button {
+    font-size: 11px;
+    padding: 2px 4px;
+    margin-right: 10px;
+}
+
+.cancel-button {
+    font-size: 14px;
+    float: right;
+    padding: 5px 10px;
+    margin-left: 15px;
+}
+
+.delete-button, .cancel-button {
+    background-color: #E71313;
+}
+
+.delete-button:hover, .cancel-button:hover {
+    background-color: #D50000;
+}
