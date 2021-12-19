@@ -74,10 +74,8 @@
     console.log("Uniq names of people between 20 and 30 in descending order:");
     console.log(peopleBetween20and30UniqNames);
 
-    var namesWithCountNames = _.chain(people)
-        .countBy("name")
-        .value();
+    var namesWithNamesCounts = _.countBy(people, "name");
 
     console.log("Object of type \"name: count of people with this name\": ");
-    console.log(namesWithCountNames);
+    console.log(namesWithNamesCounts);
 })();
