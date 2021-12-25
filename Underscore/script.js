@@ -64,11 +64,10 @@
         .filter(function (person) {
             return person.age >= 20 && person.age <= 30;
         })
-        .sortBy(function (person) {
-            return -person.age;
-        })
         .pluck("name")
         .uniq()
+        .sortBy()
+        .reverse()
         .value();
 
     console.log("Uniq names of people between 20 and 30 in descending order:");
