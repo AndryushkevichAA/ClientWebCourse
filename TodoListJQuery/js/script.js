@@ -20,9 +20,9 @@ $(function () {
                 + "<button class=\"cancel-button\" type=\"button\">Cancel</button>"
                 + "<button class=\"save-button\" type=\"button\">Save</button>");
 
-            todoItem.find(".edit-todo-text").val(text);
+            $(".error-message").first().clone().appendTo(todoItem);
 
-            todoItem.append(document.querySelector(".error-message").cloneNode(true));
+            todoItem.find(".edit-todo-text").val(text);
 
             todoItem.find(".save-button").click(function () {
                 var newText = todoItem.find(".edit-todo-text").val().trim();
