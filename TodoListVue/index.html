@@ -5,7 +5,6 @@
     <title>Todo List Vue</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="node_modules/vue/dist/vue.min.js"></script>
     <script defer src="script.js"></script>
@@ -13,42 +12,45 @@
 <body>
 <div v-cloak id="app" class="container">
     <h1 class="text-center">Todo List</h1>
-    <form @submit.prevent="addNewTodo" class="mb-4 w-75 mx-auto">
-        <div>
-            <label class="form-label">Enter new TODO item</label>
-            <div class="row gx-3">
-                <div class="col">
-                    <input v-model="newTodoText" class="form-control" type="text"
-                           :class="{ 'is-invalid' : isNewTodoTextInvalid }">
-                    <span class="invalid-feedback">Field must not be empty</span>
-                </div>
-                <div class="col-auto">
-                    <button class="btn btn-primary w-auto">Add</button>
+    <div class="row justify-content-center">
+        <form @submit.prevent="addNewTodo" class="mb-4 col-12 col-md-10 col-lg-8">
+            <div>
+                <label class="form-label">Enter new TODO item</label>
+                <div class="row gx-3">
+                    <div class="col">
+                        <input v-model.trim="newTodoText" class="form-control" type="text"
+                               :class="{ 'is-invalid' : isNewTodoTextInvalid }">
+                        <span class="invalid-feedback">Field must not be empty</span>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-primary w-auto">Add</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
 
-    <ul class="list-unstyled w-75 mx-auto">
-        <todo-item v-for="(item, index) in items"
-                   :key="item.id"
-                   :item="item"
-                   :index="index"
-                   @delete-item="deleteItem"
-                   @save-item="saveItem"></todo-item>
-    </ul>
+        <ul class="list-unstyled col-12 col-md-10 col-lg-8">
+            <todo-item v-for="(item, index) in items"
+                       :key="item.id"
+                       :item="item"
+                       :index="index"
+                       @delete-item="deleteItem"
+                       @save-item="saveItem"></todo-item>
+        </ul>
+    </div>
 </div>
 
 <script id="todo-item-template" type="text/x-template">
     <li class="mb-2">
         <div v-if="!isEditing">
-            <button type="button" class="btn btn-danger btn-sm" @click="$emit('delete-item', item)" title="Delete">X</button>
+            <button type="button" class="btn btn-danger btn-sm" @click="$emit('delete-item', item)" title="Delete">X
+            </button>
             {{ index + 1 }}. {{ item.text }}
             <button type="button" class="btn btn-primary ms-3" @click="editItem">Edit</button>
         </div>
         <div v-else class="row gx-3">
             <div class="col">
-                <input v-model="editingText" class="form-control" :class="{ 'is-invalid': isInvalid }">
+                <input v-model.trim="editingText" class="form-control" :class="{ 'is-invalid': isInvalid }">
                 <span class="invalid-feedback">Field must not be empty</span>
             </div>
             <div class="col-auto">
